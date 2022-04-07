@@ -1,0 +1,516 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Open Meal",
+    "version": "v1"
+  },
+  "servers": [
+    {
+      "url": "/api/open-meal"
+    }
+  ],
+  "paths": {
+    "/v3/distributors": {
+      "get": {
+        "tags": [
+          "Distributor"
+        ],
+        "summary": "This method returns a list of Distributors (for example schools and retirement homes) for a specific Data Provider",
+        "parameters": [
+          {
+            "name": "addressCountry",
+            "in": "query",
+            "description": "SE - optional parameter used to only get the Distributors for a specific country.Use the 2-letter ISO 3166-1 aplha-2 country code, for example \"SE\" for Sweden",
+            "schema": {
+              "type": "string",
+              "description": "SE - optional parameter used to only get the Distributors for a specific country.Use the 2-letter ISO 3166-1 aplha-2 country code, for example \"SE\" for Sweden",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DistributorsListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v3/meals": {
+      "get": {
+        "tags": [
+          "Meal"
+        ],
+        "summary": "This method returns a list of Meals",
+        "parameters": [
+          {
+            "name": "distributorId",
+            "in": "query",
+            "description": "parameter specifying the Data Provider ID for a Distributor, used to return only the meals for that distributor.If not provided meals for all distributors are returned",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "parameter specifying the Data Provider ID for a Distributor, used to return only the meals for that distributor.If not provided meals for all distributors are returned",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "startDate",
+            "in": "query",
+            "description": "1951-09-08 specifying the start of the period to get meals for. If not specified todays data will be used as default.",
+            "schema": {
+              "type": "string",
+              "description": "1951-09-08 specifying the start of the period to get meals for. If not specified todays data will be used as default.",
+              "format": "date-time",
+              "nullable": true
+            }
+          },
+          {
+            "name": "endDate",
+            "in": "query",
+            "description": "1951-09-08 specifying the end of the period to get meals for. If not specified the next 7 days will be used as default.",
+            "schema": {
+              "type": "string",
+              "description": "1951-09-08 specifying the end of the period to get meals for. If not specified the next 7 days will be used as default.",
+              "format": "date-time",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MenuResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Address": {
+        "type": "object",
+        "properties": {
+          "streetAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "postalCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "addressLocality": {
+            "type": "string",
+            "nullable": true
+          },
+          "addressRegion": {
+            "type": "string",
+            "nullable": true
+          },
+          "addressCountry": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Wgs84": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "coordinates": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sweref99": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "coordinates": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sweref99local": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "coordinates": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Location": {
+        "type": "object",
+        "properties": {
+          "wgs84": {
+            "$ref": "#/components/schemas/Wgs84"
+          },
+          "sweref99": {
+            "$ref": "#/components/schemas/Sweref99"
+          },
+          "sweref99local": {
+            "$ref": "#/components/schemas/Sweref99local"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Distributor": {
+        "required": [
+          "address",
+          "location"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "lang": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "$ref": "#/components/schemas/Address"
+          },
+          "location": {
+            "$ref": "#/components/schemas/Location"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "url": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "iCalendar": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DistributorsListResponse": {
+        "required": [
+          "distributors"
+        ],
+        "type": "object",
+        "properties": {
+          "distributors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Distributor"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "DistributorSummary": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LookupCode": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Ingredient": {
+        "required": [
+          "codes"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "codes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LookupCode"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "Media": {
+        "type": "object",
+        "properties": {
+          "src": {
+            "type": "string",
+            "nullable": true
+          },
+          "mimeType": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Allergen": {
+        "required": [
+          "codes"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "codes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LookupCode"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "Tag": {
+        "required": [
+          "codes"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "codes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LookupCode"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "Nutrient": {
+        "required": [
+          "codes"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "amount": {
+            "type": "number",
+            "format": "double"
+          },
+          "unit": {
+            "type": "string",
+            "nullable": true
+          },
+          "codes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LookupCode"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "Course": {
+        "required": [
+          "ingredients",
+          "knownAllergens",
+          "media",
+          "nutrients",
+          "tags"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "optionName": {
+            "type": "string",
+            "nullable": true
+          },
+          "order": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "labelOfContents": {
+            "type": "string",
+            "nullable": true
+          },
+          "ingredients": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Ingredient"
+            }
+          },
+          "media": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Media"
+            }
+          },
+          "knownAllergens": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Allergen"
+            }
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Tag"
+            }
+          },
+          "nutrients": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Nutrient"
+            }
+          },
+          "price": {
+            "type": "string",
+            "nullable": true
+          },
+          "co2Equivalents": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Meal": {
+        "required": [
+          "courses",
+          "distributor"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "date": {
+            "type": "string",
+            "nullable": true
+          },
+          "lang": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "distributor": {
+            "$ref": "#/components/schemas/DistributorSummary"
+          },
+          "courses": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Course"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "MenuResponse": {
+        "required": [
+          "meals"
+        ],
+        "type": "object",
+        "properties": {
+          "meals": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Meal"
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "Token": {
+        "type": "apiKey",
+        "description": "Access token",
+        "name": "Token",
+        "in": "header"
+      }
+    }
+  },
+  "security": [
+    {
+      "Token": [ ]
+    }
+  ]
+}
