@@ -1,5 +1,5 @@
 $(function() {	
-	var openMealDataProviderURL = 'https://raw.githubusercontent.com/Orebrokommun/Open-Meal-Information/master/dataproviders.json';
+	var openMealDataProviderURL = 'https://raw.githubusercontent.com/Sambruk/Open-Meal/master/dataproviders.json';
 
 	// Populate initial data provider drop down
   	var dataProiderXHR = $.getJSON(openMealDataProviderURL, function(response){  		
@@ -61,7 +61,7 @@ $(function() {
   		var currentProvider = $("#openMealWizard #dataProviders option:selected");  		
   		var openMealURL = currentProvider.data('baseurl') + '/openmeal/v2/meals.json?distributorID=' + currentOption.val();
   		var code = '<div id="openMealWidget" data-language="' + currentOption.data('language') + '" data-openmealurl="' + openMealURL + '"></div>\n' +  		
-    			   '<script src="https://orebrokommun.github.io/Open-Meal-Information/js/widget.js" id="openMealWidgetScript" data-widgets="openMealWidget"></script>';
+    			   '<script src="https://sambruk.github.io/Open-Meal/js/widget.js" id="openMealWidgetScript" data-widgets="openMealWidget"></script>';
 
 		$('#openMealWizard #openMealWidgetCode code').text(code);   		
 

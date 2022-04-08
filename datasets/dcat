@@ -20,7 +20,7 @@
 	<dcterms:description xml:lang="en">API to get data about what food is being served at large kitchens, like schools and elderly care homes. Data already available for all schools in Sweden that is using the Skolmatappen as well as available for Swedish schools using Mashie that has requested that the menu data is published as open data.</dcterms:description>
 	<dcat:dataset rdf:resource="https://dcat-editor.com/store/28/resource/2"/>
 	<dcterms:publisher rdf:resource="https://dcat-editor.com/store/28/resource/7"/>
-	<foaf:homepage>http://orebrokommun.github.io/Open-Meal-Information</foaf:homepage>
+	<foaf:homepage>https://sambruk.github.io/Open-Meal</foaf:homepage>
 	<dcterms:issued>2015-12-16</dcterms:issued>
 	<dcterms:license rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/"/>
 	<dcterms:language rdf:resource="http://publications.europa.eu/resource/authority/language/SWE"/>
@@ -73,7 +73,7 @@
 	<dcterms:issued>2015-09-18</dcterms:issued>
 	<dcat:theme rdf:resource="http://eurovoc.europa.eu/100157"/>
 	<dcterms:accrualPeriodicity rdf:resource="http://purl.org/cld/freq/continuous"/>
-	<dcat:landingPage rdf:resource="http://orebrokommun.github.io/Open-Meal-Information/"/>
+	<dcat:landingPage rdf:resource="https://sambruk.github.io/Open-Meal/"/>
 	<dcterms:language rdf:resource="http://publications.europa.eu/resource/authority/language/SWE"/>
 	<adms:version>2</adms:version>
 </dcat:Dataset>
@@ -139,10 +139,10 @@
 	<dcterms:title xml:lang="sv">Lista dataleverantörer </dcterms:title>
 	<dcterms:description xml:lang="en">An API-anrop to get all the open meal data providers that in turn can provide menus etc.</dcterms:description>
 	<dcterms:description xml:lang="sv">Ett API-anrop för att hämta information om alla Open Meals dataleverantörer. Dessa kan sedan i sin tur tillhandahålla menyinformation etc.</dcterms:description>
-	<dcat:accessURL rdf:resource="https://raw.githubusercontent.com/Orebrokommun/Open-Meal-Information/master/dataproviders.json"/>
+	<dcat:accessURL rdf:resource="https://raw.githubusercontent.com/Sambruk/Open-Meal/master/dataproviders.json"/>
 	<dcterms:license rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/"/>
 	<dcterms:format>application/json</dcterms:format>
-	<dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/Orebrokommun/Open-Meal-Information/master/dataproviders.json"/>
+	<dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/Sambruk/Open-Meal/master/dataproviders.json"/>
 	<dcterms:rights>
 		<odrs:RightsStatement rdf:nodeID="node1a6q8mj0cx1">
 			<odrs:copyrightHolder rdf:resource="https://dcat-editor.com/store/28/resource/7"/>
