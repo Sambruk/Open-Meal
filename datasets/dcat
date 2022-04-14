@@ -139,10 +139,10 @@
 	<dcterms:title xml:lang="sv">Lista dataleverantörer </dcterms:title>
 	<dcterms:description xml:lang="en">An API-anrop to get all the open meal data providers that in turn can provide menus etc.</dcterms:description>
 	<dcterms:description xml:lang="sv">Ett API-anrop för att hämta information om alla Open Meals dataleverantörer. Dessa kan sedan i sin tur tillhandahålla menyinformation etc.</dcterms:description>
-	<dcat:accessURL rdf:resource="https://raw.githubusercontent.com/Sambruk/Open-Meal/master/dataproviders.json"/>
+	<dcat:accessURL rdf:resource="https://raw.githubusercontent.com/Sambruk/Open-Meal/main/dataproviders.json"/>
 	<dcterms:license rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/"/>
 	<dcterms:format>application/json</dcterms:format>
-	<dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/Sambruk/Open-Meal/master/dataproviders.json"/>
+	<dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/Sambruk/Open-Meal/main/dataproviders.json"/>
 	<dcterms:rights>
 		<odrs:RightsStatement rdf:nodeID="node1a6q8mj0cx1">
 			<odrs:copyrightHolder rdf:resource="https://dcat-editor.com/store/28/resource/7"/>
