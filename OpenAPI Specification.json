@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "Open Meal 3.2",
+    "title": "Open Meal",
     "description": "",
     "version": "3.2"
   },
@@ -28,8 +28,7 @@
           },
           {
             "name": "api-version",
-            "in": "query",
-            "required": true,
+            "in": "header",
             "schema": {
               "type": "string"
             }
@@ -65,7 +64,7 @@
           },
           {
             "name": "api-version",
-            "in": "query",
+            "in": "header",
             "required": true,
             "schema": {
               "type": "string"
@@ -107,10 +106,8 @@
             "name": "distributorId",
             "in": "query",
             "description": "parameter specifying the Data Provider ID for a Distributor, used to return only the meals for that distributor.If not provided meals for all distributors are returned",
-            "required": true,
             "schema": {
-              "type": "string",
-              "format": "uuid"
+              "type": "string"
             }
           },
           {
@@ -133,7 +130,7 @@
           },
           {
             "name": "api-version",
-            "in": "query",
+            "in": "header",
             "required": true,
             "schema": {
               "type": "string"
@@ -544,7 +541,7 @@
             "nullable": true
           }
         },
-        "additionalProperties": { }
+        "additionalProperties": {}
       },
       "Tag": {
         "required": [
@@ -577,7 +574,7 @@
   },
   "security": [
     {
-      "Token": [ ]
+      "Token": []
     }
   ]
 }
