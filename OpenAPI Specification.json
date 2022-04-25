@@ -375,6 +375,9 @@
         "additionalProperties": false
       },
       "Location": {
+        "required": [
+          "geoPositionRepresentations"
+        ],
         "type": "object",
         "properties": {
           "name": {
@@ -385,8 +388,7 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/Position"
-            },
-            "nullable": true
+            }
           }
         },
         "additionalProperties": false
@@ -497,6 +499,9 @@
         "additionalProperties": false
       },
       "Position": {
+        "required": [
+          "coordinates"
+        ],
         "type": "object",
         "properties": {
           "coordinateSystem": {
@@ -510,8 +515,7 @@
               "type": "number",
               "format": "double"
             },
-            "description": "A pair of Coordinates indicating a point on a map",
-            "nullable": true
+            "description": "A pair of Coordinates indicating a point on a map"
           }
         },
         "additionalProperties": false
