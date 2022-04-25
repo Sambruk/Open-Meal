@@ -65,7 +65,6 @@
           {
             "name": "api-version",
             "in": "header",
-            "required": true,
             "schema": {
               "type": "string"
             }
@@ -131,7 +130,6 @@
           {
             "name": "api-version",
             "in": "header",
-            "required": true,
             "schema": {
               "type": "string"
             }
