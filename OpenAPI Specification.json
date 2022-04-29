@@ -27,6 +27,14 @@
             }
           },
           {
+            "name": "searchText",
+            "in": "query",
+            "description": "Search-text to find specific distributor",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "api-version",
             "in": "header",
             "schema": {
@@ -291,6 +299,10 @@
             "nullable": true
           },
           "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "organization": {
             "type": "string",
             "nullable": true
           },
