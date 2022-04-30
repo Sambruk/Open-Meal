@@ -112,7 +112,15 @@
           {
             "name": "distributorId",
             "in": "query",
-            "description": "parameter specifying the Data Provider ID for a Distributor, used to return only the meals for that distributor.If not provided meals for all distributors are returned",
+            "description": "Parameter specifying the Data Provider ID for a Distributor, used to return only the meals for that distributor.If not provided meals for all distributors are returned",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "language",
+            "in": "query",
+            "description": "Get data in a specific language, if omitted default language is used",
             "schema": {
               "type": "string"
             }
@@ -120,7 +128,7 @@
           {
             "name": "startDate",
             "in": "query",
-            "description": "1951-09-08 specifying the start of the period to get meals for. If not specified todays data will be used as default.",
+            "description": "1951-09-08 specifying the start of the period to get meals for. If not specified today's data will be used as default.",
             "schema": {
               "type": "string",
               "format": "date-time"
