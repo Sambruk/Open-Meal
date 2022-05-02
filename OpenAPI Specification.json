@@ -99,7 +99,7 @@
             }
           },
           {
-            "name": "language",
+            "name": "lang",
             "in": "query",
             "description": "Get data in a specific language, if omitted default language is used",
             "schema": {
