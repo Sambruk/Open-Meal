@@ -568,19 +568,6 @@
         },
         "additionalProperties": false
       }
-    },
-    "securitySchemes": {
-      "Token": {
-        "type": "apiKey",
-        "description": "Access token",
-        "name": "Token",
-        "in": "header"
-      }
     }
-  },
-  "security": [
-    {
-      "Token": []
-    }
-  ]
+  }
 }
