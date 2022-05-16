@@ -9,6 +9,6 @@ När du bestämt dig för att vara med och bidra till att informationen om målt
 
 1. Ställ frågor till din befintliga leverantör av kostplaneringssystem: Kan ert system leverera öppna data enligt den nationella definitionen på [sambruk.github.io/Open-Meal/](https://sambruk.github.io/Open-Meal/)? Om så inte är fallet idag, när kommer det att ske?
 
-2. Ställ krav på leverantörer vid upphandling av kostplaneringssystem: Den föreslagna lösningen ska leverera öppna data enligt den nationella definitionen som finns på: [sambruk.github.io/Open-Meal/](https://sambruk.github.io/Open-Meal/)
+2. Ställ krav på leverantörer vid upphandling av kostplaneringssystem: Den föreslagna lösningen ska leverera öppna data enligt den senaste versionen av specifikationen som finns på: [sambruk.github.io/Open-Meal/](https://sambruk.github.io/Open-Meal/)
 
-För mer information om öppna måltidsdata och återanvändning av information rekommenderar vi [vidareutnyttjande.se](http://www.vidareutnyttjande.se). 
+För mer information om öppna måltidsdata och återanvändning av information rekommenderar vi [DIGGS community](https://community.dataportal.se/topic/171/m%C3%A5ltidsinformation-som-%C3%B6ppna-data-hur-du-publicerar?_=1652687469583). 
