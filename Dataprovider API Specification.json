@@ -1,0 +1,209 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Data providers API",
+    "description": "API used to serve the data providers info. Read more on data providers on https://sambruk.github.io/Open-Meal/",
+    "version": "1.0"
+  },
+  "paths": {
+    "/dataproviders": {
+      "get": {
+        "tags": [
+          "Dataprovider"
+        ],
+        "summary": "This method returns a list of Dataproviders (for example Matilda, Mashie, Skolmaten etc.). A Data provider provides the baseUrl(s) where the menu endpoints of the distributors are located.",
+        "parameters": [
+          {
+            "name": "addressCountry",
+            "in": "query",
+            "description": "SE - optional parameter used to only get the DataProviders for a specific country. Use the 2-letter ISO 3166-1 aplha-2 country code, for example \"SE\" for Sweden",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "searchText",
+            "in": "query",
+            "description": "Search-text to find specific data provider",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataProvidersListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/dataproviders/{dataProviderId}": {
+      "get": {
+        "tags": [
+          "Dataprovider"
+        ],
+        "parameters": [
+          {
+            "name": "dataProviderId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataProvider"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Address": {
+        "type": "object",
+        "properties": {
+          "streetAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "postalCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "addressLocality": {
+            "type": "string",
+            "nullable": true
+          },
+          "addressRegion": {
+            "type": "string",
+            "nullable": true
+          },
+          "addressCountry": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DataProvider": {
+        "required": [
+          "id",
+          "name",
+          "lang",
+          "address",
+          "baseUrl"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Id of the data provider"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the organisation"
+          },
+          "lang": {
+            "type": "string",
+            "description": "The 2 or 3-letter ISO 639 alpha-2 language code describing the language https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes"
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "$ref": "#/components/schemas/Address",
+            "description": "The address of the organisation. Please note this does not have to be the same as for the distributor."
+          },
+          "url": {
+            "type": "string",
+            "nullable": true,
+            "description": "The full URL to the organisations web site (http or https)"
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "baseUrl": {
+            "type": "string",
+            "description": "The Base URL is where the Data provider serves the Open Meal API endpoints"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DataProvidersListResponse": {
+        "required": [
+          "dataProviders"
+        ],
+        "type": "object",
+        "properties": {
+          "dataProviders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DataProvider"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProblemDetails": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "detail": {
+            "type": "string",
+            "nullable": true
+          },
+          "instance": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": {}
+      }
+    }
+  }
+}
