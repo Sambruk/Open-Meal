@@ -157,7 +157,7 @@
           },
           "baseUrl": {
             "type": "string",
-            "description": "The Base URL is needed to call further API methods in order to get data from a Data Provider"
+            "description": "The Base URL is where the Dta provider servers the Open Meal API endpoints"
           }
         },
         "additionalProperties": false
