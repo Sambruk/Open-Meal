@@ -16,7 +16,7 @@
           {
             "name": "addressCountry",
             "in": "query",
-            "description": "SE - optional parameter used to only get the DataProviders for a specific country. Use the 2-letter ISO 3166-1 aplha-2 country code, for example \"SE\" for Sweden",
+            "description": "SE - optional parameter used to only get the DataProviders for a specific country. Use the 2-letter ISO 3166 country code, for example \"SE\" for Sweden (https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes)",
             "schema": {
               "type": "string"
             }
@@ -132,7 +132,7 @@
           },
           "lang": {
             "type": "string",
-            "description": "The 2 or 3-letter ISO 639 alpha-2 language code describing the language https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes"
+            "description": "The 2 letter ISO 639-1 language code describing the language https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes (eg. 'sv'"
           },
           "type": {
             "type": "string",
