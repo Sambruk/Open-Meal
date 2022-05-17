@@ -338,6 +338,10 @@
           "name": {
             "type": "string",
             "nullable": true
+          },
+          "organization": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -351,7 +355,7 @@
           "distributors": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Distributor"
+              "$ref": "#/components/schemas/DistributorSummary"
             }
           }
         },
