@@ -5,7 +5,7 @@ category: doc
 date: 2015-01-03 20:24:29
 order: 8
 ---
-iCalendar is a file format that is used to show events in a calendar. A limited version of the Open Meal data can be published in iCalendar format according to the following specification. It makes the meal information usable in a large number of applications, like Microsoft Outlook, Apple Calendar and Google Calendar. 
+2iCalendar is a file format that is used to show events in a calendar. A limited version of the Open Meal data can be published in iCalendar format according to the following specification. It makes the meal information usable in a large number of applications, like Microsoft Outlook, Apple Calendar and Google Calendar. 
 
 For Data Providers that has implemented the rest of the Open Meal API it is recommended, but not obligated, to also implement the iCalendar feature. If the iCalendar feature is implemented the URL to the iCalendar should be made availale via the [List Distributors method](/doc/list-distributors.html).
 
