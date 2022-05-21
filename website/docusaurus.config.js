@@ -29,6 +29,24 @@ const config = {
 
   presets: [
     [
+      "redocusaurus",
+      {
+        specs: [
+          {
+            id: "openapi-specification",
+            spec: "OpenAPI Specification.json",
+            route: "/openapi-specification",
+          },
+        ],
+        // Plugin Options for loading OpenAPI files
+        // Theme Options for modifying how redoc renders them
+        theme: {
+          // Change with your site colors
+          primaryColor: "#1890ff",
+        },
+      },
+    ],
+    [
       "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
@@ -62,6 +80,11 @@ const config = {
             label: "Docs",
           },
           {
+            href: "/openapi-specification",
+            position: "left",
+            label: "Specification",
+          },
+          {
             href: "https://github.com/Sambruk/Open-Meal",
             label: "GitHub",
             position: "right",
@@ -75,7 +98,7 @@ const config = {
             title: "Docs",
             items: [
               {
-                label: "Tutorial",
+                label: "Docs",
                 to: "/docs/intro",
               },
             ],
