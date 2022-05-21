@@ -7,7 +7,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Open Meal",
-  tagline: "API specification to share information about meals",
+  tagline: "Openly share information about your meals!",
   url: "https://open-meal.vercel.com",
   baseUrl: "/",
   onBrokenLinks: "throw",
@@ -82,7 +82,7 @@ const config = {
           {
             href: "/openapi-specification",
             position: "left",
-            label: "Specification",
+            label: "API specification",
           },
           {
             href: "https://github.com/Sambruk/Open-Meal",
@@ -100,6 +100,10 @@ const config = {
               {
                 label: "Docs",
                 to: "/docs/intro",
+              },
+              {
+                label: "Specification",
+                to: "/openapi-specification",
               },
             ],
           },

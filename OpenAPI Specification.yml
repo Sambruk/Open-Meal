@@ -47,6 +47,23 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Distributor"
+              examples:
+                thelocalschool:
+                  value:
+                    {
+                      "name": "The Local School",
+                      "lang": "en",
+                      "address":
+                        {
+                          "streetAddress": "Main Street 42",
+                          "postalCode": "555 55",
+                          "addressLocality": "Stockholm",
+                          "addressCountry": "SE",
+                        },
+                      "url": "http://thelocalschool.se",
+                      "telephone": "+46 555 555 555",
+                      "distributorID": "123456789",
+                    }
         "404":
           description: Not Found
           content:
@@ -72,13 +89,13 @@ paths:
             type: string
         - name: startDate
           in: query
-          description: 1951-09-08 specifying the start of the period to get meals for. If not specified today's data will be used as default.
+          description: Date specifying the start of the period to get meals for. If not specified, today's date will be used as default.
           schema:
             type: string
             format: date-time
         - name: endDate
           in: query
-          description: 1951-09-08 specifying the end of the period to get meals for. If not specified the next 7 days will be used as default.
+          description: Date specifying the end of the period to get meals for. If not specified, 7 days after `startDate` will be used as default.
           schema:
             type: string
             format: date-time
@@ -89,6 +106,52 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/MenuResponse"
+              examples:
+                meals:
+                  value:
+                    {
+                      "distributor":
+                        {
+                          "name": "The Local School",
+                          "lang": "en",
+                          "address":
+                            {
+                              "streetAddress": "Main Street 42",
+                              "postalCode": "555 55",
+                              "addressLocality": "Stockholm",
+                              "addressCountry": "SE",
+                            },
+                          "url": "http://thelocalschool.se",
+                          "telephone": "+46 555 555 555",
+                          "distributorID": "123456789",
+                        },
+                      "meals":
+                        [
+                          {
+                            "date": "2015-05-20T00:00:00",
+                            "lang": "en",
+                            "name": "Lunch",
+                            "description": "Swedish Food Week",
+                            "courses":
+                              [
+                                {
+                                  "name": "Swedish Meatballs with mashed potatoes",
+                                  "order": 1,
+                                  "ingredients": "Meat, bread crumbs, eggs, milk, potatoes",
+                                  "allergens": ["Egg", "Milk", "Nuts"],
+                                  "nutrients":
+                                    [
+                                      {
+                                        "name": "Energy",
+                                        "amount": "540",
+                                        "unit": "kcal",
+                                      },
+                                    ],
+                                },
+                              ],
+                          },
+                        ],
+                    }
         "400":
           description: Bad Request
           content:

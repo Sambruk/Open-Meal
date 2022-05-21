@@ -1,15 +1,11 @@
----
-sidebar_position: 3
----
+# Providers
 
-# List distributors
-
-This method returns a list of Distributors (for example schools and retirement homes) for a specific Data Provider. In order to call this method the Data Providers Base URL need to retreived using the [List Data Providers](/doc/list-data-providers.html) method.
+This API method list all Data Providers that have implemented the Open Meal API specification and that has registered as a Data Provider. Use this method to get the Base URL for the Data Providers, which is required to call any other methods in the Open Meal API.
 
 <table>
 	<tr>
 		<td>URL: </td>
-		<td>[Data Provider Base URL]/openmeal/v2/distributors.json</td>
+		<td><a href="https://raw.githubusercontent.com/Sambruk/Open-Meal/main/dataproviders.json">https://raw.githubusercontent.com/Sambruk/Open-Meal/main/dataproviders.json</a></td>
 	</tr>
 	<tr>
 		<td>HTTP Method: </td>
@@ -17,7 +13,7 @@ This method returns a list of Distributors (for example schools and retirement h
 	</tr>
 	<tr>
 		<td>Parameters: </td>
-		<td><ul><li>addressCountry - optional parameter used to only get the Distributors for a specific country. Use the 2-letter [ISO 3166-1 aplha-2](http://en.wikipedia.org/wiki/ISO_3166-1) country code, for example "SE" for Sweden</li></ul></td>
+		<td>None</td>
 	</tr>
 	<tr>
 		<td>Formats: </td>
@@ -27,7 +23,7 @@ This method returns a list of Distributors (for example schools and retirement h
 
 ## Response
 
-The method returns a list of Distributors, including name, contact information and the Data Provider ID. Distributors are described with a data model inspired by the [schema.org Organization](http://schema.org/Organization).
+The method returns a list of Data Providers, including name, contact information and Base URL. Data Providers are described with a data model inspired by the [schema.org Organization](http://schema.org/Organization).
 
 | Property                  | Type   | Description                                                                                                                                                                    | Required? |
 | ------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------- |
@@ -43,29 +39,47 @@ The method returns a list of Distributors, including name, contact information a
 | url                       | String | The URL to the organisations web site                                                                                                                                          | No        |
 | email                     | String | A contact email address for the organisation                                                                                                                                   | No        |
 | phone                     | String | A contact phone number for the organisation                                                                                                                                    | No        |
-| distirbutorID             | String | Identifiying the Distributor within the Data Providers systems, not a unique ID across several Data Providers. Used to get data for a specific Distributor                     | Yes       |
-| iCalendar                 | String | The URL to an iCalendar feed with the meal information. [Read more](/doc/icalendar.html) information about the optional iCalendar feature.                                     | No        |
-| language                  |
+| baseUrl                   | String | The Base URL is needed to call further API methods in order to get data from a Data Provider.                                                                                  | Yes       |
 
 ## Example
 
-    GET http://openmeal.foodindustries.inc/openmeal/v2/distributors.json?addressCountry=SE
+    GET https://raw.githubusercontent.com/Sambruk/Open-Meal/main/dataproviders.json
 
     {
         "data" : [
         	{
-    			"name" : "The Local School",
+    			"name" : "Food Industries Inc.",
     			"lang" : "en",
     			"address" : {
-    				"streetAddress" : "Main Street 42",
-    				"postalCode" : "555 55",
-    				"addressLocality" : "Stockholm",
-    				"addressCountry" : "SE"
+    				"addressCountry" : "US"
     			},
-    			"url" : "http://thelocalschool.se",
-    			"telephone" : "+46 555 555 555",
-    			"distributorID" : "123456789"
+    			"url" : "http://foodindustries.inc",
+    			"email" : "openmeal@foodindustries.inc",
+    			"telephone" : "+1 555 555 555",
+    			"baseUrl" : "http://openmeal.foodindustries.inc"
     		},
     		...
         ]
     }
+
+## Want to be included as a Data Provider?
+
+The Open Meal API is open for any organisation with meal information to implement. Simply read through the API documentation on this site and implement an API that follows the specification. Especially note the following:
+
+- Publishing data via the Open Meal API means that it is available under the [Creative Commons Zero](http://creativecommons.org/publicdomain/zero/1.0/) license.
+- The Open Meal API should be open for all to use without the need to register or authenticate.
+- Return HTTP Status 200 OK if a everything works as it should with a request, HTTP Status 404 is a resource (URL) is not found, HTTP 400 if a request is incorrectly formated and HTTP 500 if something else goes wrong.
+- The _Get Meals_ methods with all parameters must be implemented.
+- All responses should be UTF-8 encoded.
+
+It is the responsiblity of the Data Provider that the API is implemented correctly and to support any developers that reports bugs or has questions about the implementation of the Open Meal API.
+
+### DCAT-AP
+
+[DCAT-AP](https://joinup.ec.europa.eu/asset/dcat_application_profile/description) is a European specification of how to describe public sector datasets.
+
+#### Data Providers
+
+An example of a DCAT-AP file for Data Providers is available at [dataprovider-dcat-ap-example.rdf](/Open-Meal/dataprovider-dcat-ap-example.rdf)
+
+Please change all URLs, email addresses and mentions of _Data Provider_ into the relevant information.
