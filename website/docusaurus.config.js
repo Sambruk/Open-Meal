@@ -7,8 +7,8 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Open Meal",
-  tagline: "Dinosaurs are cool",
-  url: "https://your-docusaurus-test-site.com",
+  tagline: "API specification to share information about meals",
+  url: "https://open-meal.vercel.com",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -34,7 +34,7 @@ const config = {
         specs: [
           {
             id: "openapi-specification",
-            spec: "OpenAPI Specification.json",
+            spec: "OpenAPI Specification.yml",
             route: "/openapi-specification",
           },
         ],

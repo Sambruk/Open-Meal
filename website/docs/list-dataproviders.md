@@ -68,4 +68,4 @@ The method returns a list of Data Providers, including name, contact information
 
 ## Want to be included as a Data Provider?
 
-This is open to all, read more about [How to Implement the API](/docs/how-to-implement/how-to-implement.md).
+This is open to all, read more about [How to Implement the API](/docs/how-to-implement.md).
