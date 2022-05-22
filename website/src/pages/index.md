@@ -1,18 +1,23 @@
-# Getting started
+# Open Meal
 
-The specification has two parts:
+The goal for Open Meal is to facilitate a way for municipalities and organisations to openly share menus from their meal distributors (schools, retirement homes and more). Data is shared through [providers](/docs/providers) and can be consumed by third-party developers to build custom applications on top of it.
 
-- A REST [API](/docs/api) returning data in JSON format
-- [iCalendar](/docs/icalendar) with a subset of the information. The calendar-feed can be used by smartphones and pads as well as other calendar software to subscribe to the information.
--
+If you have questions or suggestions you are welcome to start a discussion on [GitHub](https://github.com/Sambruk/Open-Meal/discussions). You are also welcome to contribute to the development by submitting Pull Requests. For Swedish users, a history of comments can be found on [dataportal](https://community.dataportal.se/topic/171/måltidsinformation-som-öppna-data-hur-du-publicerar?_=1652685653024).
 
-## Version history
+## Making your data available
 
-| Version |                                                                                                                                                                                                                                                                                         Description |
-| :------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| 3.2     |                                                                                                                                                                                                                                 The current version of the specification as seen in this repository |
-| 3.1     | The [NSÖD](https://www.ri.se/sv/vad-vi-gor/projekt/nationell-skalning-oppna-data) project created [an updated version of the specification](https://www.dataportal.se/sv/specifications/Mltidsinformation/NSOD#ref=?p=1&q=m%C3%A5ltid&s=2&t=20&f=&rt=spec_standard%24spec_profile&c=false) in 2021. |
-| 2.0     |                                                                                                                                                  [The first version of the specification](https://orebrokommun.github.io/Open-Meal-Information/) was created by the municipality of Örebro in 2015. |
+As a municipality or another actor with data that you wish to make available for developers to consume, you have a number of options:
+
+1. Let your Meal Plan System (MPS) expose the data through their Open Meal API implementation.
+2. Let
+
+## Using the API
+
+## Contributors
+
+- [NSÖD](https://www.ri.se/sv/vad-vi-gor/projekt/nationell-skalning-oppna-data)
+- [Matilda FoodTech](https://www.matildafoodtech.com/)
+- [IST Group](https://www.ist.com/)
 
 ## Background
 

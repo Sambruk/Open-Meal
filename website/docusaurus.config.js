@@ -69,7 +69,7 @@ const config = {
       navbar: {
         title: "Open Meal",
         logo: {
-          alt: "My Site Logo",
+          alt: "Logo",
           src: "img/logo.svg",
         },
         items: [
@@ -111,16 +111,12 @@ const config = {
             title: "Community",
             items: [
               {
-                label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
+                label: "GitHub Discussions",
+                href: "https://github.com/Sambruk/Open-Meal/discussions",
               },
               {
-                label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
-              },
-              {
-                label: "Twitter",
-                href: "https://twitter.com/docusaurus",
+                label: "Sveriges dataportal",
+                href: "https://community.dataportal.se/topic/171/m%C3%A5ltidsinformation-som-%C3%B6ppna-data-hur-du-publicerar",
               },
             ],
           },

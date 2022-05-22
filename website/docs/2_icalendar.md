@@ -2,7 +2,7 @@
 
 iCalendar is a file format that is used to show events in a calendar. A limited version of the Open Meal data can be published in iCalendar format according to the following specification. It makes the meal information usable in a large number of applications, like Microsoft Outlook, Apple Calendar and Google Calendar.
 
-For Data Providers that has implemented the rest of the Open Meal API it is recommended, but not obligated, to also implement the iCalendar feature. If the iCalendar feature is implemented the URL to the iCalendar should be made availale via the [List Distributors method](/doc/list-distributors.html).
+Implementation of the iCalendar feature is optional but strongly recommended for data providers. If the iCalendar feature is implemented, the URL to the iCalendar should be made availale via the [distributor](/openapi-specification#tag/Distributor).
 
 ## Calendars
 
@@ -65,7 +65,7 @@ For all text properties (Summary, Description, Location etc) special characters 
     END:VCALENDAR
 ```
 
-This is an example of [an iCalendar feed available for subscription for the school ”Engelbrektsskolan” in Örebro, Sweden](https://skolmaten.se/about/calendar/engelbrektsskolan/). The page is in swedish but the subscription link is called ”Kalender” and is located at the bottom of the page. Copy the link for use in your calendar software or just click it, most devices will ask you if you want to subscribe. This is what it will look like on an ipad:
+This is an example of [an iCalendar feed available for subscription for the school ”Engelbrektsskolan” in Örebro, Sweden](https://skolmaten.se/about/calendar/engelbrektsskolan/). The page is in swedish but the subscription link is called ”Kalender” and is located at the bottom of the page. Copy the link for use in your calendar software or just click it, most devices will ask you if you want to subscribe. This is what it can look like:
 
-<img src="/Open-Meal/img/Kalender-maltidsinformation-crop.png" /><br/>
-<img src="/Open-Meal/img/Kalender-maltidsinformation-crop-expanded.png" />
+![Calendar](/img/Kalender-maltidsinformation-crop.png)
+![Calendar expanded](/img/Kalender-maltidsinformation-crop-expanded.png)
