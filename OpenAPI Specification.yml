@@ -276,11 +276,11 @@ components:
         name:
           type: string
           nullable: true
-          description: The name of the organisation serving the meal
+          description: Name of the distributor serving the meal
         organization:
           type: string
           nullable: true
-          description:
+          description: Name of the organisation serving the meal
         lang:
           type: string
           nullable: true
