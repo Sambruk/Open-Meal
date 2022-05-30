@@ -6,14 +6,6 @@ The specification has two parts:
 - [iCalendar](/docs/icalendar) with a subset of the information. The calendar-feed can be used by smartphones and pads as well as other calendar software to subscribe to the information.
 -
 
-## Version history
-
-| Version |                                                                                                                                                                                                                                                                                         Description |
-| :------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| 3.2     |                                                                                                                                                                                                                                 The current version of the specification as seen in this repository |
-| 3.1     | The [NSÖD](https://www.ri.se/sv/vad-vi-gor/projekt/nationell-skalning-oppna-data) project created [an updated version of the specification](https://www.dataportal.se/sv/specifications/Mltidsinformation/NSOD#ref=?p=1&q=m%C3%A5ltid&s=2&t=20&f=&rt=spec_standard%24spec_profile&c=false) in 2021. |
-| 2.0     |                                                                                                                                                  [The first version of the specification](https://orebrokommun.github.io/Open-Meal-Information/) was created by the municipality of Örebro in 2015. |
-
 ## Background
 
 The open meal information project was started by 3 municipalities in Sweden - [Helsingborg](http://www.helsingborg.se/), [Linköping](http://linkoping.se/) and [Örebro](http://www.orebro.se/). The goal was to make sure all municipalities in Sweden shared information about meals as menus in the same way so it would be easier to reuse. The goal was to create open data.
