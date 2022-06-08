@@ -2,17 +2,18 @@
 sidebar_position: 6
 ---
 
-# How to implement
+# Implementing the API
 
-The Open Meal API is open to any organisation with meal information to implement. Simply read through the API documentation on this site and implement an API that follows the specification. Especially note the following:
+Do you wish to provide your own implementation of the API? The Open Meal API is open to any organisation with meal information to implement. Simply read through the API documentation on this site and implement an API that follows the specification.
+
+Note the following:
 
 - Publishing data via the Open Meal API means that it is available under the [Creative Commons Zero](http://creativecommons.org/publicdomain/zero/1.0/) license.
-- The Open Meal API should be open for all to use without the need to register or authenticate.
-- Return HTTP Status 200 OK if a everything works as it should with a request, HTTP Status 404 is a resource (URL) is not found, HTTP 400 if a request is incorrectly formated and HTTP 500 if something else goes wrong.
-- The _Get Meals_ methods with all parameters must be implemented.
+- Mandatory fields must exist in the response
 - All responses should be UTF-8 encoded.
+- It is the responsiblity of the Data Provider that the API is implemented correctly and to support any developers that reports bugs or has questions about the implementation of the Open Meal API.
 
-It is the responsiblity of the Data Provider that the API is implemented correctly and to support any developers that reports bugs or has questions about the implementation of the Open Meal API.
+You can use the existing API specification to generate code by using for example Swagger Codegen to get started quickly.
 
 ## DCAT-AP
 
