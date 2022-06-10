@@ -23,9 +23,3 @@ You can use the [API specification](/openapi-specification) to generate code by 
 ## DCAT-AP
 
 [DCAT-AP](https://joinup.ec.europa.eu/asset/dcat_application_profile/description) is a European specification of how to describe public sector datasets.
-
-### Providers
-
-An example of a DCAT-AP file for distributors is available at [dataprovider-dcat-ap-example.rdf](/dataprovider-dcat-ap-example.rdf)
-
-Please change all URLs, email addresses and mentions of _Data Provider_ into the relevant information.

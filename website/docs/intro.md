@@ -9,4 +9,4 @@ The goal for Open Meal is to facilitate a way for municipalities and organisatio
 The Open Meal API consists of two parts:
 
 - A REST [API](/docs/api/specification) returning data in JSON format
-- An [iCalendar](/docs/icalendar) feed with a subset of the information. The feed can be used by smartphones and pads as well as other calendar software to subscribe to the information.
+- An [iCalendar](/docs/api/icalendar) feed with a subset of the information. The feed can be used by smartphones and pads as well as other calendar software to subscribe to the information.
