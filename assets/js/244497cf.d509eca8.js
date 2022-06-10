@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[467],{7628:function(e){e.exports=JSON.parse('{"title":"API","slug":"/category/api","permalink":"/Open-Meal/docs/category/api","navigation":{"previous":{"title":"Introduction","permalink":"/Open-Meal/docs/intro"},"next":{"title":"Specification","permalink":"/Open-Meal/docs/API/specification"}}}')}}]);
