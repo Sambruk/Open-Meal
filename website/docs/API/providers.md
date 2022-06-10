@@ -4,13 +4,20 @@ sidebar_position: 3
 
 # Providers
 
-A provider is an implementor of the API.
+A provider is an implementor of the API that can enable access to organisations and third-party developers interested in using it.
 
 ## Known providers
 
 These are the currently known providers for version 3.x of the Open Meal API:
 
-TODO
+```json
+{
+  "name": "Mashie",
+  "url": "http://www.matildafoodtech.com",
+  "baseUrl": "https://mpi.mashie.com/api/open-meal",
+  "email": "hello@matildafoodtech.com"
+}
+```
 
 ## Dynamically listing providers
 
@@ -21,25 +28,3 @@ GET https://raw.githubusercontent.com/Sambruk/Open-Meal/main/dataproviders.json
 ```
 
 It will list a number of properties including the `baseUrl` which should be used in all Open Meal requests towards the provider.
-
-## Want to be included as a Data Provider?
-
-The Open Meal API is open for any organisation with meal information to implement. Simply read through the API documentation on this site and implement an API that follows the specification. Especially note the following:
-
-- Publishing data via the Open Meal API means that it is available under the [Creative Commons Zero](http://creativecommons.org/publicdomain/zero/1.0/) license.
-- The Open Meal API should be open for all to use without the need to register or authenticate.
-- Return HTTP Status 200 OK if a everything works as it should with a request, HTTP Status 404 is a resource (URL) is not found, HTTP 400 if a request is incorrectly formated and HTTP 500 if something else goes wrong.
-- The _Get Meals_ methods with all parameters must be implemented.
-- All responses should be UTF-8 encoded.
-
-It is the responsiblity of the Data Provider that the API is implemented correctly and to support any developers that reports bugs or has questions about the implementation of the Open Meal API.
-
-### DCAT-AP
-
-[DCAT-AP](https://joinup.ec.europa.eu/asset/dcat_application_profile/description) is a European specification of how to describe public sector datasets.
-
-#### Data Providers
-
-An example of a DCAT-AP file for Data Providers is available at [dataprovider-dcat-ap-example.rdf](/Open-Meal/dataprovider-dcat-ap-example.rdf)
-
-Please change all URLs, email addresses and mentions of _Data Provider_ into the relevant information.

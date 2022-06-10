@@ -9,3 +9,11 @@
   height: 200px;
   width: 200px;
 }
+
+.link {
+  color: inherit;
+}
+
+.link:hover {
+  text-decoration: none;
+}

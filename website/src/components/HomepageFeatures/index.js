@@ -1,43 +1,46 @@
-import React from 'react';
-import clsx from 'clsx';
-import styles from './styles.module.css';
+import React from "react";
+import clsx from "clsx";
+import styles from "./styles.module.css";
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: "Consuming the API",
+    Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
+    link: "/docs/consuming-api",
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        As a developer that would like to use the Open Meal API to fetch data or
+        to build an application on top of it, have a look here!
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: "Making your data available",
+    Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
+    link: "/docs/make-your-data-available",
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        As an organisation with meal data that you would like to share through
+        this API, have a look here!
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: "Implementing the API",
+    Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
+    link: "/docs/how-to-implement",
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        As a software vendor that would like to provide an implementation of the
+        API for others to use, have a look here!
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({ Svg, link, title, description }) {
   return (
-    <div className={clsx('col col--4')}>
+    <a href={link} className={clsx("col col--4", styles.link)}>
       <div className="text--center">
         <Svg className={styles.featureSvg} role="img" />
       </div>
@@ -45,7 +48,7 @@ function Feature({Svg, title, description}) {
         <h3>{title}</h3>
         <p>{description}</p>
       </div>
-    </div>
+    </a>
   );
 }
 
