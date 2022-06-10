@@ -8,8 +8,8 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "Open Meal",
   tagline: "Openly share information about your meals!",
-  url: "https://open-meal.vercel.com",
-  baseUrl: "/",
+  url: "https://sambruk.github.io/Open-Meal",
+  baseUrl: "/Open-Meal/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
