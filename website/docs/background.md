@@ -14,6 +14,4 @@ The goal was to create an open specification that could be used by all suppliers
 
 One motivation for this project was to create a proof-of-concept for solving one of the problems identified by the national coordination of municipal open data headed by [SKR](http://skr.se/) (an organisation for cooperation run by the municipalities) namely that open data published by 290 municipalities in 290 different ways will be very hard to reuse. Since the value of open data is realized in the reuse this aspect is critical in achieving the desired effects (new and better services and transparency in government).
 
-No work was done on the specification until the Swedish project NSÖD (a national project helping municipalities and regions to publish open data in standardized formats). NSÖD created a new version of the specification (3.0) and worked together with Matilda FoodTech and IST to further improve the specification. Soon version 3.1 and 3.2 were released.
-
-not long after an updated version 3.2. NSÖD revised the specification and added a lot more structure for ingredients and nutritinal information.
+No work was done on the specification until the Swedish project NSÖD (a national project helping municipalities and regions to publish open data in standardized formats). NSÖD created a new version of the specification (3.0) and worked together with Matilda FoodTech and IST to further improve the specification. Soon version 3.1, 3.2 and 3.3 were released with improvements like more structured ingredient- and nutritional information.

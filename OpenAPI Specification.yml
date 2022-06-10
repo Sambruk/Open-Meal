@@ -2,7 +2,7 @@ openapi: 3.0.1
 info:
   title: Open Meal
   description: ""
-  version: "3.2"
+  version: "3.3"
 paths:
   /distributors:
     get:
@@ -27,7 +27,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/DistributorsListResponse"
+                $ref: "#/components/schemas/Distributor"
   /distributors/{distributorId}:
     get:
       tags:
