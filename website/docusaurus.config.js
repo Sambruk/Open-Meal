@@ -8,7 +8,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "Open Meal",
   tagline: "Openly share information about your meals!",
-  url: "https://sambruk.github.io/Open-Meal",
+  url: "https://sambruk.github.io/",
   baseUrl: "/Open-Meal/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -71,7 +71,7 @@ const config = {
         title: "Open Meal",
         logo: {
           alt: "Logo",
-          src: "img/logo.svg",
+          src: "img/logo.png",
         },
         items: [
           {

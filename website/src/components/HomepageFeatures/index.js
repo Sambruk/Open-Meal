@@ -5,8 +5,8 @@ import styles from "./styles.module.css";
 const FeatureList = [
   {
     title: "Consuming the API",
-    Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
-    link: "/docs/consuming-api",
+    Svg: require("@site/static/img/embed2.svg").default,
+    link: "/Open-Meal/docs/consuming-api",
     description: (
       <>
         As a developer that would like to use the Open Meal API to fetch data or
@@ -16,8 +16,8 @@ const FeatureList = [
   },
   {
     title: "Making your data available",
-    Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
-    link: "/docs/make-your-data-available",
+    Svg: require("@site/static/img/sphere.svg").default,
+    link: "/Open-Meal/docs/make-your-data-available",
     description: (
       <>
         As an organisation with meal data that you would like to share through
@@ -27,8 +27,8 @@ const FeatureList = [
   },
   {
     title: "Implementing the API",
-    Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
-    link: "/docs/how-to-implement",
+    Svg: require("@site/static/img/cogs.svg").default,
+    link: "/Open-Meal/docs/how-to-implement",
     description: (
       <>
         As a software vendor that would like to provide an implementation of the
