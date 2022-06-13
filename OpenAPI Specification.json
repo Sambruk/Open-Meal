@@ -3,7 +3,7 @@
   "info": {
     "title": "Open Meal",
     "description": "",
-    "version": "3.2"
+    "version": "3.3"
   },
   "paths": {
     "/distributors": {
@@ -355,7 +355,7 @@
           "distributors": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/DistributorSummary"
+              "$ref": "#/components/schemas/Distributor"
             }
           }
         },
