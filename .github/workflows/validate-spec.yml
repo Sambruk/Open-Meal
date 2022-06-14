@@ -1,0 +1,15 @@
+name: Validate specification
+
+on:
+  pull_request:
+
+jobs:
+  validate_openapi_spec:
+    runs-on: ubuntu-latest
+    name: Validate Open Meal specification
+    steps:
+      - uses: actions/checkout@v2
+      - name: Validate OpenAPI-Specification.yml
+        uses: char0n/swagger-editor-validate@v1
+        with:
+          definition-file: OpenAPI-Specification.yml
