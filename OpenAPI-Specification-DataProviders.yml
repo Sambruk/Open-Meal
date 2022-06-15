@@ -1,0 +1,127 @@
+openapi: 3.0.1
+info:
+  title: Data providers API
+  description: API used to serve the data providers info. A data provider provides the basePath where the Open Meal information is served.
+    <br>
+    <br>
+    Read more on https://sambruk.github.io/Open-Meal/
+    <br>
+    <br>
+    ************************
+    <br>
+    NOTE! *Version 1 is only a placeholder to fit the rest of the documentation. There are no active enpoint(s).*
+    <br>
+    ************************
+    <br>
+    <br>
+    To retrieve the data providers, get the *dataproviders.json* directly hosted at [https://raw.githubusercontent.com/Sambruk/Open-Meal/main/dataproviders.json](https://raw.githubusercontent.com/Sambruk/Open-Meal/main/dataproviders.json)
+    <br>
+    <br>
+    The content of dataproviders.json corresponds to the response of endpoint /dataproviders
+  version: '1.0'
+paths:
+  /dataproviders:
+    get:
+      tags:
+        - Data providers
+      summary: Returns a list of data providers (for example Matilda, Mashie, Skolmaten etc.). A datap rovider provides the basePath where the Open Meal information is served for it's distributors.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DataProvidersListResponse'
+              examples: 
+                current (dataProviders):
+                  value: {
+                    dataProviders: [
+                      # Only required data properties
+                      {
+                        baseUrl: "https://www.apretendcompany.com/api/open-meal",
+                        email: "hello@apretendcompany.com",
+                        id: "987654",
+                        lang: "sv",
+                        name: "A pretend company",
+                        url: "http://www.apretendcomany.com"
+                      },
+                      # Complete data set
+                      {
+                        baseUrl: "https://www.anotherpretendcompany.com/api/v2",
+                        email: "info@anotherpretendcompany.com",
+                        id: "12345678",
+                        lang: "sv",
+                        name: "Another pretend company",
+                        url: "wwww.anotherpretendcompany.com"
+                      }
+                    ]
+                  }
+                deprecated (data):
+                  description: <b>!Deprecated!</b>. Used for backwards compatibility. Will be removed next version. Does not support fields 'id' or 'lang'
+                  value: {
+                    data: [
+                      # Only required data properties
+                      {
+                        baseUrl: "https://www.apretendcompany.com/api/open-meal",
+                        email: "hello@apretendcompany.com",
+                        name: "A pretend company",
+                        url: "http://www.apretendcomany.com"
+                      },
+                      # Complete data set
+                      {
+                        baseUrl: "https://www.anotherpretendcompany.com/api/v2",
+                        email: "info@anotherpretendcompany.com",
+                        name: "Another pretend company",
+                        url: "wwww.anotherpretendcompany.com"
+                      }
+                    ]
+                  }
+components:
+  schemas:
+    DataProvider:
+      required:
+        - baseUrl
+        - email
+        - id
+        - lang
+        - name
+        - url
+      type: object
+      properties:
+        baseUrl:
+          type: string
+          description: The Base URL is where the Data provider serves the Open Meal API endpoints
+        email:
+          type: string
+          nullable: true
+        id:
+          type: string
+          description: Id of the data provider
+        lang:
+          type: string
+          description: The 2 letter ISO 639-1 language code describing the language https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes (eg. 'sv')
+        name:
+          type: string
+          description: The name of the organisation
+        url:
+          type: string
+          nullable: true
+          description: The full URL to the organisations web site (http or https)
+      additionalProperties: false
+    DataProvidersListResponse:
+      required:
+        - data
+        - dataProviders
+      type: object
+      properties:
+        data:
+          deprecated: true
+          type: array
+          items:
+            $ref: '#/components/schemas/DataProvider'
+          description: Use dataProviders instead. The data field will be removed in next version.
+        dataProviders:
+          type: array
+          items:
+            $ref: '#/components/schemas/DataProvider'
+      additionalProperties: false
