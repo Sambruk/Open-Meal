@@ -36,7 +36,7 @@ paths:
                 current (dataProviders):
                   value: {
                     dataProviders: [
-                      # Only required data properties
+                      # Complete data set
                       {
                         baseUrl: "https://www.apretendcompany.com/api/open-meal",
                         email: "hello@apretendcompany.com",
@@ -60,14 +60,14 @@ paths:
                   description: <b>!Deprecated!</b>. Used for backwards compatibility. Will be removed next version. Does not support fields 'id' or 'lang'
                   value: {
                     data: [
-                      # Only required data properties
+                      # Partial, backwards compatible, missing some required fields.
                       {
                         baseUrl: "https://www.apretendcompany.com/api/open-meal",
                         email: "hello@apretendcompany.com",
                         name: "A pretend company",
                         url: "http://www.apretendcomany.com"
                       },
-                      # Complete data set
+                      # Partial, backwards compatible, missing some required fields.
                       {
                         baseUrl: "https://www.anotherpretendcompany.com/api/v2",
                         email: "info@anotherpretendcompany.com",
