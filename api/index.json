@@ -1,0 +1,10 @@
+{
+  "data": [
+    {
+      "name": "Mashie",
+      "url": "http://www.matildafoodtech.com",
+      "baseUrl": "https://mpi.mashie.com/api/open-meal",
+      "email": "hello@matildafoodtech.com"
+    }
+  ]
+}
