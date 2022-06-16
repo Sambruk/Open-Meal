@@ -27,7 +27,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Distributor"
+                $ref: '#/components/schemas/DistributorsListResponse'
   /distributors/{distributorId}:
     get:
       tags:
@@ -335,7 +335,7 @@ components:
         distributors:
           type: array
           items:
-            $ref: "#/components/schemas/DistributorSummary"
+            $ref: "#/components/schemas/Distributor"
       additionalProperties: false
     Ingredient:
       required:
