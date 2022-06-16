@@ -335,7 +335,7 @@ components:
         distributors:
           type: array
           items:
-            $ref: "#/components/schemas/DistributorSummary"
+            $ref: "#/components/schemas/Distributor"
       additionalProperties: false
     Ingredient:
       required:
