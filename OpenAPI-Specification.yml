@@ -110,48 +110,67 @@ paths:
                 meals:
                   value:
                     {
-                      "distributor":
-                        {
-                          "name": "The Local School",
-                          "lang": "en",
-                          "address":
-                            {
-                              "streetAddress": "Main Street 42",
-                              "postalCode": "555 55",
-                              "addressLocality": "Stockholm",
-                              "addressCountry": "SE",
-                            },
-                          "url": "http://thelocalschool.se",
-                          "telephone": "+46 555 555 555",
-                          "distributorID": "123456789",
-                        },
-                      "meals":
-                        [
+                        "meals": [
                           {
-                            "date": "2015-05-20T00:00:00",
-                            "lang": "en",
-                            "name": "Lunch",
-                            "description": "Swedish Food Week",
-                            "courses":
-                              [
-                                {
-                                  "name": "Swedish Meatballs with mashed potatoes",
-                                  "order": 1,
-                                  "ingredients": "Meat, bread crumbs, eggs, milk, potatoes",
-                                  "allergens": ["Egg", "Milk", "Nuts"],
-                                  "nutrients":
-                                    [
+                            "name": "Lunch 1",
+                            "date": "2022-06-16",
+                            "lang": null,
+                            "description": null,
+                            "distributor": {
+                              "id": "923608a6-e294-4149-ac79-a19f6e7adfd7",
+                              "name": "Matkund 1",
+                              "organization": Matköping
+                            },
+                            "courses": [
+                              {
+                                "id": "8f86e3ae-6c42-4ef3-bd32-d3de426ad3ec",
+                                "name": "Fransk pastagratäng med kyckling",
+                                "optionName": "Lunch 1",
+                                "order": 0,
+                                "labelOfContents": "Kycklingfond , GratängOST 28%, Lasagnette, Salt, SENAP Dijon, VispGRÄDDE, Pastakyckling, Paprika röd strimlad, Svartpeppar mald, MellanMJÖLK 1,5% 10L  EKO",
+                                "ingredients": [
+                                  {
+                                    "name": "Kycklingfond ",
+                                    "codes": []
+                                  },
+                                  {
+                                    "name": "GratängOST 28%",
+                                    "codes": []
+                                  }
+                                ],
+                                "media": [],
+                                "knownAllergens": [
+                                  {
+                                    "name": "Selleri",
+                                    "codes": [
                                       {
-                                        "name": "Energy",
-                                        "amount": "540",
-                                        "unit": "kcal",
-                                      },
-                                    ],
-                                },
-                              ],
-                          },
-                        ],
-                    }
+                                        "code": "BC",
+                                        "type": "GS1"
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "tags": [],
+                                "nutrients": [
+                                  {
+                                    "name": "Energi (kJ)",
+                                    "amount": 1958.69,
+                                    "unit": "kJ",
+                                    "codes": [
+                                      {
+                                        "code": "ENKJ",
+                                        "type": "GS1"
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "price": null,
+                                "co2Equivalents": 0.58
+                              }
+                            ]
+                          }
+                        ]
+                      }
         "400":
           description: Bad Request
           content:
