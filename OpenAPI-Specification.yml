@@ -27,7 +27,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Distributor"
+                $ref: '#/components/schemas/DistributorsListResponse'
   /distributors/{distributorId}:
     get:
       tags:
