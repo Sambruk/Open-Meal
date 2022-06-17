@@ -125,6 +125,7 @@ paths:
                               {
                                 "id": "8f86e3ae-6c42-4ef3-bd32-d3de426ad3ec",
                                 "name": "Fransk pastagratäng med kyckling",
+                                "description": "Krämig pastagratäng med dragonkryddad kyckling och tre sorters ost",
                                 "optionName": "Lunch 1",
                                 "order": 0,
                                 "labelOfContents": "Kycklingfond , GratängOST 28%, Lasagnette, Salt, SENAP Dijon, VispGRÄDDE, Pastakyckling, Paprika röd strimlad, Svartpeppar mald, MellanMJÖLK 1,5% 10L  EKO",
@@ -235,6 +236,10 @@ components:
           type: string
           nullable: true
           description: The name of the course
+        description:
+          type: string
+          nullable: true
+          description: Description of the course
         optionName:
           type: string
           nullable: true
