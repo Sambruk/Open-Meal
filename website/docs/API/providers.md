@@ -17,7 +17,7 @@ GET https://sambruk.github.io/Open-Meal/api/dataproviders/
 ```
 
 See the full specification of the Data Provider API:
-- As a [raw yml file](https://github.com/Sambruk/Open-Meal/blob/main/OpenAPI-Specification-DataProviders.yml)
+- As a [raw yml file](https://raw.githubusercontent.com/Sambruk/Open-Meal/main/OpenAPI-Specification-DataProviders.yml)
 - In the [Swagger Editor](https://editor.swagger.io/?url=https://raw.githubusercontent.com/Sambruk/Open-Meal/main/OpenAPI-Specification-DataProviders.yml)
 
 
