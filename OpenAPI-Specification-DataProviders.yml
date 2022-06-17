@@ -7,7 +7,7 @@ info:
 
 servers: 
   - url: https://sambruk.github.io/Open-Meal/api
-    description: Sambruk endpoint
+    description: Sambruk baseUrl
   
 paths:
   /dataproviders:
