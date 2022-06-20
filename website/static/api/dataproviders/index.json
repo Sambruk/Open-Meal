@@ -3,16 +3,7 @@
     {
       "baseUrl": "https://mpi.mashie.com/api/open-meal",
       "email": "hello@matildafoodtech.com",
-      "id": "mashie",
-      "lang": "sv",
-      "name": "Mashie",
-      "url": "http://www.matildafoodtech.com"
-    }
-  ],
-  "data": [
-    {
-      "baseUrl": "https://mpi.mashie.com/api/open-meal",
-      "email": "hello@matildafoodtech.com",
+      "id": "0",
       "name": "Mashie",
       "url": "http://www.matildafoodtech.com"
     }
