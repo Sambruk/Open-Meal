@@ -26,4 +26,4 @@ In order to appear as a Data provider your info must be added to the file [/webs
 
 If you want to be added to the list of data providers, [CREATE AN ISSUE](https://github.com/Sambruk/Open-Meal/issues) in the project or contact any of the project members for assistance.
 
-The id property is arbitrary and until a general concent on what format to use is agreed upon any string can be used. Prefferably in the form of a increasing number starting from "0"
+The id property is arbitrary and until a general concent on what format to use is agreed upon. Until then, any string can be used. Prefferably in the form of a increasing number starting from "0"
