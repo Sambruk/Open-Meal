@@ -14,7 +14,7 @@ paths:
     get:
       tags:
         - Data providers
-      summary: Returns a list of data providers (for example Matilda, Mashie, Skolmaten etc.). A datap rovider provides the basePath where the Open Meal information is served for it's distributors.
+      summary: Returns a list of data providers (for example Matilda, Mashie, Skolmaten etc.). A data provider provides the basePath where the Open Meal information is served for it's distributors.
       responses:
         '200':
           description: Success
@@ -29,16 +29,16 @@ paths:
                         baseUrl: "https://www.apretendcompany.com/api/open-meal",
                         email: "hello@apretendcompany.com",
                         id: "1",
+                        lang: "sv",
                         name: "A pretend company",
                         url: "http://www.apretendcomany.com"
                       },
-                      # Complete data set
+                      # partial data set
                       {
                         baseUrl: "https://www.anotherpretendcompany.com/api/v2",
                         email: "info@anotherpretendcompany.com",
                         id: "someId",
-                        name: "Another pretend company",
-                        url: "wwww.anotherpretendcompany.com"
+                        name: "Another Pretend Company"
                       }
                     ]
                   }
@@ -49,6 +49,7 @@ components:
         - baseUrl
         - email
         - id
+        - name
       type: object
       properties:
         baseUrl:
@@ -73,18 +74,12 @@ components:
       additionalProperties: false
     DataProvidersListResponse:
       required:
-        - data
         - dataProviders
       type: object
       properties:
-        data:
-          deprecated: true
-          type: array
-          items:
-            $ref: '#/components/schemas/DataProvider'
-          description: Use dataProviders instead. The data field will be removed in next version.
         dataProviders:
           type: array
           items:
             $ref: '#/components/schemas/DataProvider'
+          description: Returns a list of data providers. A data provider provides the basePath where the Open Meal information is served for it's distributors. The Array must exist, but it can be empty.
       additionalProperties: false
