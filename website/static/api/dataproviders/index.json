@@ -1,0 +1,12 @@
+{
+  "dataProviders": [
+    {
+      "baseUrl": "https://mpi.mashie.com/api/open-meal",
+      "email": "hello@matildafoodtech.com",
+      "id": "0",
+      "lang": "sv",
+      "name": "Mashie",
+      "url": "http://www.matildafoodtech.com"
+    }
+  ]
+}

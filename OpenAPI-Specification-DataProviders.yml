@@ -1,0 +1,85 @@
+openapi: 3.0.1
+info:
+  title: Data providers API
+  description: API used to serve the data providers info. A data provider provides the basePath where the Open Meal information is served.
+    Read more on [https://sambruk.github.io/Open-Meal/](https://sambruk.github.io/Open-Meal/)
+  version: '1.0'
+
+servers: 
+  - url: https://sambruk.github.io/Open-Meal/api
+    description: Sambruk baseUrl
+  
+paths:
+  /dataproviders:
+    get:
+      tags:
+        - Data providers
+      summary: Returns a list of data providers (for example Matilda, Mashie, Skolmaten etc.). A data provider provides the basePath where the Open Meal information is served for it's distributors.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DataProvidersListResponse'
+              example: {
+                    dataProviders: [
+                      # Complete data set
+                      {
+                        baseUrl: "https://www.apretendcompany.com/api/open-meal",
+                        email: "hello@apretendcompany.com",
+                        id: "1",
+                        lang: "sv",
+                        name: "A pretend company",
+                        url: "http://www.apretendcomany.com"
+                      },
+                      # partial data set
+                      {
+                        baseUrl: "https://www.anotherpretendcompany.com/api/v2",
+                        email: "info@anotherpretendcompany.com",
+                        id: "someId",
+                        name: "Another Pretend Company"
+                      }
+                    ]
+                  }
+components:
+  schemas:
+    DataProvider:
+      required:
+        - baseUrl
+        - email
+        - id
+        - name
+      type: object
+      properties:
+        baseUrl:
+          type: string
+          description: The Base URL is where the Data provider serves the Open Meal API endpoints
+        email:
+          type: string
+          nullable: true
+        id:
+          type: string
+          description: Id of the data provider. An arbitrary string is currently ok to use.
+        lang:
+          type: string
+          description: The 2 letter ISO 639-1 language code describing the language https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes (eg. 'sv')
+        name:
+          type: string
+          description: The name of the organisation
+        url:
+          type: string
+          nullable: true
+          description: The full URL to the organisations web site (http or https)
+      additionalProperties: false
+    DataProvidersListResponse:
+      required:
+        - dataProviders
+      type: object
+      properties:
+        dataProviders:
+          type: array
+          items:
+            $ref: '#/components/schemas/DataProvider'
+          description: Returns a list of data providers. A data provider provides the basePath where the Open Meal information is served for it's distributors. The Array must exist, but it can be empty.
+      additionalProperties: false
