@@ -49,8 +49,6 @@ components:
         - baseUrl
         - email
         - id
-        - lang
-        - url
       type: object
       properties:
         baseUrl:
