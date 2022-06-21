@@ -43,7 +43,7 @@ If you are using GitHub pages for hosting, this command is a convenient way to b
 # Data providers
 
 ### Data provider endpoint
-The data providers are served using the nifty little github pages feature that allows for a static json file beeing returned as application/json automatically from within a folder.[dsa](dsad)
+The data providers are served using the nifty little github pages feature that allows for a static json file beeing returned as application/json automatically from within a folder.
 
 * The folder should be named as the intended endpoint.
 * Put the json file in the folder and name it to `index.json`
