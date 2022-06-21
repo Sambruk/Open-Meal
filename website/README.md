@@ -39,3 +39,20 @@ $ GIT_USER=<Your GitHub username> yarn deploy
 ```
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+
+# Data providers
+
+### Data provider endpoint
+The data providers are served using the nifty little github pages feature that allows for a static json file beeing returned as application/json automatically from within a folder.[dsa](dsad)
+
+* The folder should be named as the intended endpoint.
+* Put the json file in the folder and name it to `index.json`
+
+Using this feature we serve the dataproviders as an endpoint from using the `index.json` file in `static/api/dataproviders/` folder (deployed to gh-pages as `/api/dataproviders`).
+
+### Add a Data Provider
+To add a data provider you need update the file [static/api/dataproviders/index.json](static/api/dataproviders/index.json)
+
+View the specification for the dataprovider endpoint in [Swagger editor](https://editor.swagger.io/?url=https://raw.githubusercontent.com/Sambruk/Open-Meal/main/OpenAPI-Specification-DataProviders.yml).
+
+The field `id` is arbitrary so until a certain standard is agreed upon, any (not already existing) string will suffice. We reccomend just incrementing the already existing index counter.
