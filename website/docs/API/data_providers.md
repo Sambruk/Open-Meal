@@ -2,13 +2,13 @@
 sidebar_position: 3
 ---
 
-# Providers
+# Data providers
 
-A provider is an implementor of the API that can enable access to organisations and third-party developers interested in using it.
+A Data provider is an implementor of the API that can enable access to organisations and third-party developers interested in using it.
 
-## Known providers
+## Known Data providers
 
-You can issue a GET request to the following URL to get an up-to-date list of data providers supporting  version 3.x of the Open Meal API.
+You can issue a GET request to the following URL to get an up-to-date list of dataProviders supporting version 3.x of the Open Meal API.
 
 It will list a number of properties including the `baseUrl` which should be used in all Open Meal requests towards the provider.
 
@@ -21,7 +21,7 @@ See the full specification of the Data Provider API:
 - In the [Swagger Editor](https://editor.swagger.io/?url=https://raw.githubusercontent.com/Sambruk/Open-Meal/main/OpenAPI-Specification-DataProviders.yml)
 
 
-## Add provider
+## Add a Data provider
 In order to appear as a Data provider your info must be added to the file [/website/static/api/dataproviders/index.json](https://github.com/Sambruk/Open-Meal/tree/main/website/static/api/dataprovider/index.json).
 
 If you want to be added to the list of data providers, [CREATE AN ISSUE](https://github.com/Sambruk/Open-Meal/issues) in the project or contact any of the project members for assistance.
