@@ -247,11 +247,11 @@ components:
         order:
           type: integer
           format: int32
-          description: Used to sort the courses in a prefered order, with lowest order value first.
+          description: Used to sort the courses in a preferred order, with lowest order value first.
         labelOfContents:
           type: string
           nullable: true
-          description: List ingredients as text. Prebuild lable of contents for easier use.
+          description: List ingredients as text. Prebuild label of contents for easier use.
         ingredients:
           type: array
           items:
@@ -266,7 +266,7 @@ components:
           type: array
           items:
             $ref: "#/components/schemas/Allergen"
-          description: Describes the allergens of the course by name. Please follow the standard given by your national department/authority for agriculture, food and consumer affairs. See reference for more information. A empy value do not mean there are no allergenes, it could just not have been entered. So it shows possible allergenes, not definitive.
+          description: Describes the allergens of the course by name. Please follow the standard given by your national department/authority for agriculture, food and consumer affairs. See reference for more information. A empty value do not mean there are no allergens, it could just not have been entered. So it shows possible allergens, not definitive.
         tags:
           type: array
           items:
@@ -276,7 +276,7 @@ components:
           type: array
           items:
             $ref: "#/components/schemas/Nutrient"
-          description: The nutrition values in a standard serving of the course. Strongly recommended. If published as open data, the nutrition values should be refered as by your department for agriculture, food and consumer affairs, in Sweden it is Livsmedelsverket and "Livsmedelsdatabasen", see reference.
+          description: The nutrition values in a standard serving of the course. Strongly recommended. If published as open data, the nutrition values should be referred as by your department for agriculture, food and consumer affairs, in Sweden it is Livsmedelsverket and "Livsmedelsdatabasen", see reference.
         price:
           type: string
           nullable: true
