@@ -10,4 +10,4 @@ The API is described in an [OpenAPI specification](https://swagger.io/specificat
 - As a [raw yml file](https://github.com/Sambruk/Open-Meal/blob/main/OpenAPI-Specification.yml)
 - In the [Swagger Editor](https://editor.swagger.io/?url=https://raw.githubusercontent.com/Sambruk/Open-Meal/main/OpenAPI-Specification.yml)
 
-Note that the specification does not contain URL:s with domain names so you will need to prepend those when making requests towards your chosen [provider](/docs/api/providers). Also note you might need to add authentication headers to make requests towards a certain provider. Other potential differences in provider implementations should be documented on the [providers](/docs/api/providers) page.
+Note that the specification does not contain URL:s with domain names so you will need to prepend those when making requests towards your chosen [data provider](/docs/api/data_providers). Also note you might need to add authentication headers to make requests towards a certain provider. Other potential differences in provider implementations should be documented on the [data provider](/docs/api/data_providers) page.

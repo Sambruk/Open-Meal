@@ -1,6 +1,6 @@
 openapi: 3.0.1
 info:
-  title: Data providers API
+  title: Data Providers API
   description: API used to serve the data providers info. A data provider provides the basePath where the Open Meal information is served.
     Read more on [https://sambruk.github.io/Open-Meal/](https://sambruk.github.io/Open-Meal/)
   version: '1.0'
@@ -13,7 +13,7 @@ paths:
   /dataproviders:
     get:
       tags:
-        - Data providers
+        - Data Providers
       summary: Returns a list of data providers (for example Matilda, Mashie, Skolmaten etc.). A data provider provides the basePath where the Open Meal information is served for it's distributors.
       responses:
         '200':
@@ -54,7 +54,7 @@ components:
       properties:
         baseUrl:
           type: string
-          description: The Base URL is where the Data provider serves the Open Meal API endpoints
+          description: The Base URL is where the data provider serves the Open Meal API endpoints
         email:
           type: string
           nullable: true
