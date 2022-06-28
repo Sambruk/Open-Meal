@@ -7,10 +7,10 @@ Site based on the [jekyll-docs-template](http://bruth.github.io/jekyll-docs-temp
 View specification in [Swagger editor](https://editor.swagger.io/?url=https://raw.githubusercontent.com/Sambruk/Open-Meal/main/OpenAPI-Specification.yml).
 
 
-## Dataprovider
+## Data Provider
 View the specification for the dataprovider endpoint in [Swagger editor](https://editor.swagger.io/?url=https://raw.githubusercontent.com/Sambruk/Open-Meal/main/OpenAPI-Specification-DataProviders.yml).
 
-### Data provider endpoint
+### Data Provider Endpoint
 The data providers are served using the nifty little github pages feature that allows for a static json file beeing returned as application/json automatically from within a folder.
 
 * The folder should be named as the intended endpoint.
