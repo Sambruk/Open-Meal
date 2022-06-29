@@ -22,7 +22,7 @@ See the full specification of the data provider API:
 
 
 ## Add a Data Provider
-In order to appear as a data provider your info must be added to the file [/website/static/api/dataproviders/index.json](https://github.com/Sambruk/Open-Meal/tree/main/website/static/api/dataprovider/index.json).
+In order to appear as a data provider your info must be added to the file [/website/static/api/dataproviders/index.json](https://github.com/Sambruk/Open-Meal/tree/main/website/static/api/dataproviders/index.json).
 
 If you want to be added to the list of data providers, [CREATE AN ISSUE](https://github.com/Sambruk/Open-Meal/issues) in the project or contact any of the project members for assistance.
 
