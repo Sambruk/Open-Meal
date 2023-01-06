@@ -165,7 +165,18 @@ paths:
                                     ]
                                   }
                                 ],
-                                "price": null,
+                                "prices": [
+                                  {
+                                      "name": "Barn",
+                                      "value": 55,
+                                      "currency": "SEK"
+                                  },
+                                  {
+                                      "name": "Normal",
+                                      "value": 75,
+                                      "currency": "SEK"
+                                  }
+                                ],
                                 "co2Equivalents": 0.58
                               }
                             ]
@@ -225,6 +236,7 @@ components:
         - knownAllergens
         - media
         - nutrients
+        - prices
         - tags
       type: object
       properties:
@@ -277,10 +289,11 @@ components:
           items:
             $ref: "#/components/schemas/Nutrient"
           description: The nutrition values in a standard serving of the course. Strongly recommended. If published as open data, the nutrition values should be referred as by your department for agriculture, food and consumer affairs, in Sweden it is Livsmedelsverket and "Livsmedelsdatabasen", see reference.
-        price:
-          type: string
-          nullable: true
-          description: The price, with VAT included, for one standard serving of the course. The price should always be represented in the local currency e.g. in Sweden SEK. "100 SEK". Strongly recommended.
+        prices:
+          type: array
+          items:
+            $ref: "#/components/schemas/Price"
+          description: The price/prices, VAT included, for a course - with the numerical value, currency and name/type as specified by the price item. Can be empty. Strongly recommended.
         co2Equivalents:
           type: number
           format: double
@@ -485,6 +498,22 @@ components:
             format: double
           description: A pair of Coordinates indicating a point on a map
       additionalProperties: false
+    Price:
+      required:
+      - name
+      - value
+      type: object
+      properties:
+        name:
+          type: string
+          nullable: true
+        value:
+          type: number
+          format: double
+        currency:
+          type: string
+          nullable: false
+        additionalProperties: false
     ProblemDetails:
       type: object
       properties:
