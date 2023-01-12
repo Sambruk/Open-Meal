@@ -507,12 +507,15 @@ components:
         name:
           type: string
           nullable: true
+          description: A descriptive label/name for the price item, identifying for instance portion size or similar
         value:
           type: number
           format: double
+          description: The cost/amount of the item
         currency:
           type: string
           nullable: false
+          description: The three-letter currency code according to ISO 4217 (https://en.wikipedia.org/wiki/ISO_4217). Eg SEK or EUR
       additionalProperties: false
     ProblemDetails:
       type: object
