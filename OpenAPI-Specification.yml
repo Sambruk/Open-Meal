@@ -513,7 +513,7 @@ components:
         currency:
           type: string
           nullable: false
-        additionalProperties: false
+      additionalProperties: false
     ProblemDetails:
       type: object
       properties:
