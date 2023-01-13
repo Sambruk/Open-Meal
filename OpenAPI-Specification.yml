@@ -114,8 +114,9 @@ paths:
                           {
                             "name": "Lunch 1",
                             "date": "2022-06-16",
-                            "lang": null,
+                            "lang": null,                            
                             "description": null,
+                            "order": 0,
                             "distributor": {
                               "id": "923608a6-e294-4149-ac79-a19f6e7adfd7",
                               "name": "Matkund 1",
@@ -434,6 +435,10 @@ components:
           type: string
           nullable: true
           description: An optional description of the meal in order to enhance the value of the menu
+        order:
+          type: integer
+          format: int32
+          description: Used to sort the meals in a preferred order, with lowest order value first.
         distributor:
           $ref: "#/components/schemas/DistributorSummary"
           description: Information about the distributor of the meal
