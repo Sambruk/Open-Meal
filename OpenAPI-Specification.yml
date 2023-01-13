@@ -114,7 +114,7 @@ paths:
                           {
                             "name": "Lunch 1",
                             "date": "2022-06-16",
-                            "lang": null,                            
+                            "lang": null,
                             "description": null,
                             "order": 0,
                             "distributor": {
